@@ -20,12 +20,13 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;ov
 
 /* DEFAULTS */
 body {
-   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 300;
-   font-size: 12px;
-   line-height: 16px;
-   color: #454454;
-   background: #efefef;
+	-webkit-text-size-adjust:none;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 16px;
+	color: #454454;
+	background: #efefef;
 }
 
 a { color: #32a0b7; font-weight: bold; text-decoration: underline; }
@@ -184,3 +185,10 @@ img.alignleft, img.alignright,img.aligncenter { margin-bottom: 12px; }
 #content table, #content table { border-bottom: 1px solid #ddd; margin: 2%; width: 96%; }
 #content table th, #content table th { color: #666; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; line-height: 1.3em; text-transform: uppercase; }
 #content table td, #content table td { border-top: 1px solid #ddd; padding: 6px 10px 6px 0; }
+
+
+/* 480 */
+@media only screen and (max-width: 480px) {
+
+
+}
