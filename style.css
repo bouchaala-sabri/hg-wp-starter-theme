@@ -81,10 +81,13 @@ a:hover { color: #247384; }
 
 #access ul li:hover > ul { display: block; }
 
+/* NAVIGATION HIGHLIGHT */
 #access .current-menu-item > a,
 #access .current-menu-ancestor > a,
 #access .current_page_item > a,
-#access .current_page_ancestor > a { font-weight: bold; }
+#access .current_page_ancestor > a,
+#access .current-page-item > a,
+#access .current-page-ancestor > a  { font-weight: bold; }
 
 
 /* CONTENT DEFAULTS */
