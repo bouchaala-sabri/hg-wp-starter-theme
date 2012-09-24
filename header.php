@@ -4,7 +4,11 @@
 	<title><?php tt_meta_title(); ?></title>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width,minimum-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
+	<link rel="apple-touch-icon" href="<?php echo site_url(); ?>/apple-touch-icon.png" />
+	<link rel="shortcut icon" href="<?php echo site_url(); ?>/favicon.ico" />
+	
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
