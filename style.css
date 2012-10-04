@@ -27,6 +27,8 @@ body {
 	line-height: 16px;
 	color: #454454;
 	background: #efefef;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
 }
 
 a { color: #32a0b7; font-weight: bold; text-decoration: underline; }
