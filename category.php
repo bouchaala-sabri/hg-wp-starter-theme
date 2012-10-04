@@ -3,6 +3,7 @@
 	<div id="content">
 	
 		<h1><?php echo single_cat_title( '', false ); ?></h1>
+		<?php echo category_description( ); ?>
 		
 		<div id="main_column">
 			<?php 
