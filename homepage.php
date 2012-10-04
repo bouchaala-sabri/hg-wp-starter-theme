@@ -13,7 +13,7 @@ the_post();
 		
 		</div> <!-- /#rotator -->
 
-		<h1><?php $h1 = get_post_custom_values('h1'); echo ($h1) ? $h1[0] : the_title(); ?></h1>
+		<h1><?php $h1 = get_post_custom_values('h1'); echo ($h1[0]) ? $h1[0] : the_title(); ?></h1>
 	
 		<div id="homepage-content" class="cf">
 			<?php the_content(); ?>

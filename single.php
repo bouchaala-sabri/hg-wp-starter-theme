@@ -10,7 +10,7 @@ $featured_image = get_featured_image($post->ID, 'featured-image', true);
 	
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		
-			<h1><?php echo ($h1) ? $h1[0] : the_title(); ?></h1>
+			<h1><?php echo ($h1[0]) ? $h1[0] : the_title(); ?></h1>
 	
 			<div id="main_column">
 
