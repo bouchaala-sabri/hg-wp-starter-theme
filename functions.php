@@ -72,7 +72,7 @@ function page_navigation()
 }
 
 // PAGE EXCERPT
-add_action('init', 'pe_init');
-function pe_init() { if(function_exists("add_post_type_support")) { add_post_type_support( 'page', 'excerpt' ); } }
+add_action('init', 'hg_pe_init');
+function hg_pe_init() { if(function_exists("add_post_type_support")) { add_post_type_support( 'page', 'excerpt' ); } }
 
 ?>
