@@ -10,9 +10,9 @@ $alt = get_post_meta($post->ID, '_wp_attachment_image_alt', true);
 			<h1><?php the_title(); ?></h1>
 			
 			<div class="entry-attachment">
-				<?php if ( wp_attachment_is_image( $post->id ) ) : $att_image = wp_get_attachment_image_src( $post->id, "large"); ?>
+				<?php if ( wp_attachment_is_image( $post->ID ) ) : $att_image = wp_get_attachment_image_src( $post->ID, "large"); ?>
 					<div class="attachment">
-						<a href="<?php echo wp_get_attachment_url($post->id); ?>" title="<?php echo $alt; ?>" rel="attachment"><img src="<?php echo $att_image[0];?>" width="<?php echo $att_image[1];?>" height="<?php echo $att_image[2];?>"  class="attachment-medium" alt="<?php echo $alt; ?>" /></a>
+						<a href="<?php echo wp_get_attachment_url($post->ID); ?>" title="<?php echo $alt; ?>" rel="attachment"><img src="<?php echo $att_image[0];?>" width="<?php echo $att_image[1];?>" height="<?php echo $att_image[2];?>"  class="attachment-medium" alt="<?php echo $alt; ?>" /></a>
 					</div>
 					<?php if($post->post_excerpt) { ?><p class="wp-caption"><?php echo $post->post_excerpt; ?></p><?php } ?>
 					<?php if($post->post_content) { ?><p><?php echo $post->post_content; ?></p><?php } ?>

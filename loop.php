@@ -1,5 +1,5 @@
 <?php 
-	$featured_image = get_featured_image(get_the_ID(), 'thumbnail', true); 
+	$featured_image = hg_get_featured_image(get_the_ID(), 'thumbnail', true); 
 ?>
 <div class="list-entry cf">
 <?php if($featured_image) { ?>

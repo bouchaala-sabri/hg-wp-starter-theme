@@ -3,7 +3,7 @@ get_header();
 the_post(); 
 
 $h1 = get_post_custom_values('h1');
-$featured_image = get_featured_image($post->ID, 'featured-image', true);
+$featured_image = hg_get_featured_image($post->ID, 'featured-image', true);
 ?>
 
 	<div id="content">

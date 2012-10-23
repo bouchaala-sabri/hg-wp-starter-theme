@@ -29,7 +29,7 @@
 					echo "<p class=\"nothing-found\">" . __('Sorry, nothing found.') . "</p>";
 				}
 				
-				page_navigation(); 
+				hg_page_navigation(); 
 			?>
 		</div> <!-- /#main_column -->
 		

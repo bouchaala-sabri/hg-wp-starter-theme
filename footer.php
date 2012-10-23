@@ -11,7 +11,7 @@
 			
 			<div id="footer-nav">
 				<div id="copyright">&copy;<?php echo date('Y');?> <?php bloginfo( 'name' ); ?></div>
-				<?php wp_nav_menu( array( 'theme_location' => 'footer', 'fallback_cb' => false ) ); ?>
+				<?php hg_get_footer_menu(); ?>
 			</div> <!-- /#footer-nav -->
 			
 		</div> <!-- /#footer -->

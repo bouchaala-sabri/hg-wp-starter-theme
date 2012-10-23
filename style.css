@@ -84,12 +84,15 @@ a:hover { color: #247384; }
 #access ul li:hover > ul { display: block; }
 
 /* NAVIGATION HIGHLIGHT */
+#access .menu-item-home > a,
 #access .current-menu-item > a,
-#access .current-menu-ancestor > a,
-#access .current_page_item > a,
-#access .current_page_ancestor > a,
 #access .current-page-item > a,
-#access .current-page-ancestor > a  { font-weight: bold; }
+#access .current_post_item > a,
+#access .current_page_item > a,
+#access .current-post-ancestor > a,
+#access .current-page-ancestor > a,
+#access .current-menu-parent > a,
+#access .current-post-parent > a { font-weight: bold; }
 
 
 /* CONTENT DEFAULTS */
@@ -114,9 +117,9 @@ blockquote cite { display: block; text-align: right; font-size: 0.7em; margin-to
 /* FOOTER */
 #footer { margin-top: 2em; border-top: solid 1px #ccc; padding-top: 2em; }
 #footer .address { width: 48%; float: left; margin: 20px 1%; }
-#footer-nav { width: 48%; float: left; margin: 20px 1%; text-align: right; }
-#footer-nav ul { margin: 0; padding: 0; list-style: none; }
-#footer-nav ul li { display: inline; margin-left: 5px; font-size: 0.8em; }
+
+#footer-nav { text-align: center; font-size: 11px; }
+#footer-nav a { text-decoration: none; padding: 6px; font-size: 14px; }
 
 
 

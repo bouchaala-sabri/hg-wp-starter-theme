@@ -31,7 +31,7 @@
 	<div id="header">
 	
 		<div id="logo">
-			<img src="" alt="<?php bloginfo( 'name' ); ?>" />
+			<a href="<?php echo site_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/" alt="<?php echo esc_attr(get_bloginfo( 'name' )); ?>" title="<?php echo esc_attr(get_bloginfo( 'name' )); ?>" /></a>
 		</div> <!-- /#logo -->
 		
 		<div id="access" class="cf">
