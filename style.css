@@ -34,6 +34,11 @@ body {
 a { color: #32a0b7; font-weight: bold; text-decoration: underline; }
 a:hover { color: #247384; }
 
+.centered { width: 90%; margin-left: auto; margin-right: auto; }
+
+::-moz-selection { background: #fff; color: #666; text-shadow: none; }
+::selection { background: #fff; color: #666; text-shadow: none; }
+
 /* STRUCTURE */
 #shell { }
 #shell-inner { margin: 3% 5%; padding: 2%; width: 86%; background: #fff; }
