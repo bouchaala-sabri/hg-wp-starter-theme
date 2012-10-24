@@ -7,6 +7,13 @@ Author URI: http://halgatewood.com
 Version: 1.0
 License: GNU General Public License
 License URI: license.txt
+
+
+	transition: all 0.35s;
+	-moz-transition: all 0.35s;
+	-webkit-transition: all 0.35s;
+	-o-transition: all 0.35s;
+
 */
 
 /* Normalize.css */
@@ -101,8 +108,8 @@ a:hover { color: #247384; }
 
 
 /* CONTENT DEFAULTS */
-h1 { font-size: 2.5em; }
-h2,h3,h4,h5,h6 { margin: 1em 0 0.2em 0; }
+h1 { font-size: 2.5em; line-height: 1em; }
+h2,h3,h4,h5,h6 { margin: 1em 0 0.2em 0; line-height: 1em; }
 h5, h6 { text-transform: uppercase; }
 
 blockquote { margin: 2em; padding: 1em; font-size: 1.7em; line-height: 1.3em; border: solid 1px #ccc; }

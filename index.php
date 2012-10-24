@@ -24,7 +24,7 @@
 		</div> <!-- /#main_column -->
 		
 		<div id="sidebar">
-			<ul><?php dynamic_sidebar('category'); ?></ul>
+			<ul><?php dynamic_sidebar('blog'); ?></ul>
 		</div>	<!-- /#sidebar -->
 
 	</div> <!-- /#content -->

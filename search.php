@@ -24,7 +24,7 @@
 		</div>
 		
 		<div id="sidebar">
-			<ul><?php dynamic_sidebar('category'); ?></ul>
+			<ul><?php dynamic_sidebar('blog'); ?></ul>
 		</div>
 		
 		<div class="clr"></div>

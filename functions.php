@@ -11,9 +11,9 @@ register_nav_menu( 'primary', __('Primary Menu') );
 register_nav_menu( 'footer', __('Footer Menu') );
 
 // REGISTER SIDEBAR
+register_sidebar( array( 'name' => __('Homepage Sidebar'), 	'id' => 'homepage', 	'before_title' => '<h3 class="widget-title">', 'after_title' => '</h3>' ));
 register_sidebar( array( 'name' => __('Blog Sidebar'), 		'id' => 'blog', 		'before_title' => '<h3 class="widget-title">', 'after_title' => '</h3>' ));
 register_sidebar( array( 'name' => __('Page Sidebar'), 		'id' => 'page', 		'before_title' => '<h3 class="widget-title">', 'after_title' => '</h3>' ));
-register_sidebar( array( 'name' => __('Category Sidebar'), 	'id' => 'category', 	'before_title' => '<h3 class="widget-title">', 'after_title' => '</h3>' ));
 
 // CUSTOM IMAGE SIZES
 add_image_size( 'homepage-rotator', '550', '250', true );
