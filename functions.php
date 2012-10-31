@@ -19,8 +19,9 @@ register_sidebar( array( 'name' => __('Page Sidebar'), 		'id' => 'page', 		'befo
 add_image_size( 'homepage-rotator', '550', '250', true );
 add_image_size( 'featured-image', '600', '225', true );
 
-// SHORTCODES
+// SHORTCODES & WIDGETS
 require_once(dirname(__FILE__) . "/shortcodes.php");
+require_once(dirname(__FILE__) . "/widgets.php");
 
 // META TITLE (FROM twentytwelve)
 function tt_meta_title()
