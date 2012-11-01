@@ -123,7 +123,7 @@ blockquote cite { display: block; text-align: right; font-size: 0.7em; margin-to
 .aligncenter { display: block; margin: 0 auto 1.5em auto; }
 .alignright { float: right; margin:0 0 1.5em 1em; }
 .alignnone { float: none; display:block; margin:0 0 1.5em 0; }
-.size-full { width:100%; height:auto; margin:0 0 1.5em 0; }
+.size-full { max-width: 100%; height: auto; margin:0 0 1.5em 0; }
 
 #main_column { float: left; width: 70%; margin: 0 2%; }
 #sidebar { float: left; width: 22%; margin: 0 2%; }
