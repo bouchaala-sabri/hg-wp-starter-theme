@@ -13,6 +13,8 @@ License URI: license.txt
 	-moz-transition: all 0.35s;
 	-webkit-transition: all 0.35s;
 	-o-transition: all 0.35s;
+	
+	@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
 */
 
