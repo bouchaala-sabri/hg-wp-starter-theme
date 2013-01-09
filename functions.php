@@ -23,18 +23,6 @@ add_image_size( 'featured-image', '600', '225', true );
 require_once(dirname(__FILE__) . "/shortcodes.php");
 require_once(dirname(__FILE__) . "/widgets.php");
 
-// META TITLE (FROM twentytwelve)
-function tt_meta_title()
-{
-	global $page, $paged;
-
-	wp_title( '|', true, 'right' );
-	bloginfo( 'name' );
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) ) { echo " | $site_description"; }
-	if ( $paged >= 2 || $page >= 2 ) { echo ' | ' . sprintf( 'Page %s' , max( $paged, $page ) ); }
-}
-
 // GET FEATURED IMAGE
 function hg_get_featured_image( $id, $size = 'post-thumbnail', $allow_empty = false )
 {
