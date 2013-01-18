@@ -23,6 +23,11 @@ add_image_size( 'featured-image', '600', '225', true );
 require_once(dirname(__FILE__) . "/shortcodes.php");
 require_once(dirname(__FILE__) . "/widgets.php");
 
+// EDITOR THEME OPTIONS
+$role_object = get_role( 'editor' );
+$role_object->add_cap( 'edit_theme_options' );
+
+
 // GET FEATURED IMAGE
 function hg_get_featured_image( $id, $size = 'post-thumbnail', $allow_empty = false )
 {
