@@ -69,7 +69,7 @@ function hg_page_navigation()
 add_action('init', 'hg_pe_init');
 function hg_pe_init() { if(function_exists("add_post_type_support")) { add_post_type_support( 'page', 'excerpt' ); } }
 
-// CHECK FOR CATEGORY SINGLES (single-{$category})
+// CHECK FOR CATEGORY SINGLES (single-category-{$category})
 add_filter('single_template', 'check_for_category_single_template');
 function check_for_category_single_template( $t )
 {
