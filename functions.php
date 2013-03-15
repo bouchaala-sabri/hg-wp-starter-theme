@@ -69,24 +69,44 @@ function hg_page_navigation()
 add_action('init', 'hg_pe_init');
 function hg_pe_init() { if(function_exists("add_post_type_support")) { add_post_type_support( 'page', 'excerpt' ); } }
 
+// CHECK FOR CATEGORY SINGLES (single-{$category})
+add_filter('single_template', 'check_for_category_single_template');
+function check_for_category_single_template( $t )
+{
+	foreach( (array) get_the_category() as $cat ) 
+	{ 
+		if ( file_exists(TEMPLATEPATH . "/single-category-{$cat->slug}.php") ) return TEMPLATEPATH . "/single-category-{$cat->slug}.php"; 
+		if($cat->parent)
+		{
+			$cat = get_the_category_by_ID( $cat->parent );
+			if ( file_exists(TEMPLATEPATH . "/single-category-{$cat->slug}.php") ) return TEMPLATEPATH . "/single-category-{$cat->slug}.php";
+		}
+	} 
+	return $t;
+}
 
 // FOOTER MENU
 function hg_get_footer_menu( $menu_name = 'footer' )
 {
-	$footer_nav_items = wp_get_nav_menu_items( $menu_name );
-	$num_footer_items = count($footer_nav_items);
+	hg_get_footer_menu_logic( (array) wp_get_nav_menu_items( $menu_name ));
+}
+
+function hg_get_footer_menu_logic($footer_items)
+{
+	$num_footer_items = count($footer_items);
 	
-	if($num_footer_items)
+	if($num_footer_items >= 1)
 	{
 		echo "<div id=\"footer-nav\">\n";
 		$end_of_loop = $num_footer_items - 1;
-		foreach($footer_nav_items as $c => $nav_item)
+		foreach( (array) $footer_items as $c => $nav_item)
 		{
-			$add_targtet = ($nav_item->target) ? " target='{$nav_item->target}'" : "";
-			echo "	<a href=\"{$nav_item->url}\"{$add_targtet}>{$nav_item->title}</a>";
+			$add_target = ($nav_item->target) ? " target='{$nav_item->target}'" : "";
+			echo "	<a href=\"{$nav_item->url}\"{$add_target}>{$nav_item->title}</a>";
 			if($c < $end_of_loop) { echo " &bull; \n"; }
 		}
 		echo "</div>\n";
 	}
 }
+
 ?>
