@@ -2,7 +2,6 @@
 get_header(); 
 the_post(); 
 
-$h1 = get_post_custom_values('h1');
 $featured_image = hg_get_featured_image($post->ID, 'featured-image', true);
 ?>
 
@@ -10,7 +9,7 @@ $featured_image = hg_get_featured_image($post->ID, 'featured-image', true);
 	
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		
-			<h1><?php echo ($h1[0]) ? $h1[0] : the_title(); ?></h1>
+			<h1><?php the_title(); ?></h1>
 	
 			<div id="main_column">
 
@@ -21,11 +20,10 @@ $featured_image = hg_get_featured_image($post->ID, 'featured-image', true);
 				<?php } ?>
 		
 				<?php the_content(); ?>
-				
 				<?php the_tags(); ?>
 				<?php wp_link_pages(); ?>
-			
 				<?php comments_template(); ?>
+				
 			</div> <!-- /#main_column -->
 			
 			<div id="sidebar">

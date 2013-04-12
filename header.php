@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width,minimum-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	
+	<!--link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css"-->
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<link rel="apple-touch-icon" href="<?php echo site_url(); ?>/apple-touch-icon.png" />

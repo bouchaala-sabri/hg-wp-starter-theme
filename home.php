@@ -1,10 +1,11 @@
 <?php get_header(); ?>
 
 	<div id="content">
-	
-		<h1><?php _e('Blog'); ?></h1>
 		
 		<div id="main_column">
+		
+			<h1><?php _e('Blog'); ?></h1>
+		
 			<?php 
 				if ( have_posts() )
 				{

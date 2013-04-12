@@ -1,11 +1,12 @@
 <?php get_header(); ?>
 
 	<div id="content">
-	
-		<h1><?php echo single_cat_title( '', false ); ?></h1>
-		<?php echo category_description( ); ?>
 		
 		<div id="main_column">
+	
+			<h1><?php echo single_cat_title( '', false ); ?></h1>
+			<?php echo category_description( ); ?>
+		
 			<?php 
 				if ( have_posts() )
 				{

@@ -2,9 +2,10 @@
 
 	<div id="content">
 	
-		<h1><?php printf( __('Search Results for: %s'), '<span>' . get_search_query() . '</span>' ); ?></h1>
-		
 		<div id="main_column">
+		
+			<h1><?php printf( __('Search Results for: %s'), '<span>' . get_search_query() . '</span>' ); ?></h1>
+		
 			<?php 
 				if ( have_posts() )
 				{

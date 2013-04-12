@@ -2,9 +2,10 @@
 
 	<div id="content">
 	
-		<h1><?php bloginfo( 'name' ); ?></h1>
-		
 		<div id="main_column">
+		
+			<h1><?php bloginfo( 'name' ); ?></h1>
+		
 			<?php 
 				if ( have_posts() )
 				{

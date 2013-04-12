@@ -109,4 +109,17 @@ function hg_get_footer_menu_logic($footer_items)
 	}
 }
 
+
+// H1 SUPPORT
+function check_for_h1_title($title, $id)
+{
+  if (in_the_loop() AND $id == get_the_ID())
+  {
+    $h1 = get_post_meta($id, 'h1', true);
+    if($h1) return $h1;
+  }
+  return $title;
+}
+add_filter('the_title', 'check_for_h1_title', 10, 2);
+
 ?>

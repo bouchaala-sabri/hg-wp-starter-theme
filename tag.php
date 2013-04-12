@@ -2,9 +2,10 @@
 
 	<div id="content">
 	
-		<h1>Posts tagged '<?php echo single_tag_title( '', false ); ?>'</h1>
-		
 		<div id="main_column">
+		
+			<h1>Posts tagged '<?php echo single_tag_title( '', false ); ?>'</h1>
+		
 			<?php 
 				if ( have_posts() )
 				{
