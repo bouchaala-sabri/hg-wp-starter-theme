@@ -86,12 +86,12 @@ function check_for_category_single_template( $t )
 }
 
 // FOOTER MENU
-function hg_get_footer_menu( $menu_name = 'footer' )
+function hg_get_footer_menu( $menu_name = 'footer', $delimiter = "&bull;" )
 {
-	hg_get_footer_menu_logic( (array) wp_get_nav_menu_items( $menu_name ));
+	hg_get_footer_menu_logic( (array) wp_get_nav_menu_items( $menu_name ), $delimiter);
 }
 
-function hg_get_footer_menu_logic($footer_items)
+function hg_get_footer_menu_logic( $footer_items, $delimiter = "&bull;" )
 {
 	$num_footer_items = count($footer_items);
 	
@@ -103,7 +103,7 @@ function hg_get_footer_menu_logic($footer_items)
 		{
 			$add_target = ($nav_item->target) ? " target='{$nav_item->target}'" : "";
 			echo "	<a href=\"{$nav_item->url}\"{$add_target}>{$nav_item->title}</a>";
-			if($c < $end_of_loop) { echo " &bull; \n"; }
+			if($c < $end_of_loop) { echo " $delimiter \n"; }
 		}
 		echo "</div>\n";
 	}
@@ -121,5 +121,52 @@ function check_for_h1_title($title, $id)
   return $title;
 }
 add_filter('the_title', 'check_for_h1_title', 10, 2);
+
+
+// ACF - CUSTOM H1 FIELD FOR POSTS AND PAGES
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_page-options',
+		'title' => 'Page Options',
+		'fields' => array (
+			array (
+				'key' => 'field_5168782e77413',
+				'label' => 'Custom H1',
+				'name' => 'h1',
+				'type' => 'text',
+				'default_value' => '',
+				'formatting' => 'html',
+			),
+		),
+		'location' => array (
+			'rules' => array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'post',
+					'order_no' => 0,
+				),
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'page',
+					'order_no' => 1,
+				),
+			),
+			'allorany' => 'any',
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+
+
+
 
 ?>
